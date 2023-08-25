@@ -23,7 +23,7 @@ function Carousel({cruiseOne, cruiseTwo}) {
             <div className="carousel-row1">
               <div className="carousel-content1">
                 <h2 className="carousel-content1__title">
-                  {cruiseList[cruiseOne].boat_name}
+                  {cruiseList[cruiseOne-1].boat_name}
                 </h2>
               </div>
               <div className="carousel-content2">
@@ -72,7 +72,7 @@ function Carousel({cruiseOne, cruiseTwo}) {
 
             <div className="carousel-row2">
               <div className="carousel-content1">
-                <h2 className="carousel-content1__title">                  {cruiseList[cruiseTwo].boat_name}</h2>
+                <h2 className="carousel-content1__title">                  {cruiseList[cruiseTwo-1].boat_name}</h2>
               </div>
             </div>
             <div className="carousel-content-div-box">

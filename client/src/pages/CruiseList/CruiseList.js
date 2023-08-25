@@ -24,7 +24,6 @@ function CruiseList() {
     }
 
     function handleSelectCruise(cruiseClick) {
-        cruiseClick = cruiseClick-1
         let selectedButton = document.querySelectorAll('.cruise-list__compare-button')
         let selectedComparison = document.querySelectorAll('.cruise-list__comparison-container')
 
@@ -37,7 +36,7 @@ function CruiseList() {
                 tempArray.push(cruiseClick)
                 setSelectedCruises(tempArray)
                 let comparisonH3 = selectedComparison[0].appendChild(document.createElement("h3"));
-                comparisonH3.textContent = cruiseList[cruiseClick].boat_name;
+                comparisonH3.textContent = cruiseList[cruiseClick-1].boat_name;
                 let comparisonAnd = selectedComparison[0].appendChild(document.createElement("h3"));
                 comparisonAnd.textContent = '... and ...';
 
@@ -50,7 +49,7 @@ function CruiseList() {
                 tempArray.push(cruiseClick)
                 setSelectedCruises(tempArray)
                 let comparisonH3 = selectedComparison[0].appendChild(document.createElement("h3"));
-                comparisonH3.textContent = cruiseList[cruiseClick].boat_name;
+                comparisonH3.textContent = cruiseList[cruiseClick-1].boat_name;
             }
         }
     }
