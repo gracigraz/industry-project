@@ -1,8 +1,31 @@
 import "./Onboarding.scss";
+import React, { useState, useEffect } from "react";
+import questionsData from "../../data/onboarding-question.json";
 
 function Onboarding() {
+  const [currQuestionIndex, setCurrQuestionIndex] = useState(0);
+  const [answers, setAnswers] = useState(""); //stores the user's selected answer for the current question.
+  const currQuestion = questionsData[currQuestionIndex];
+
+  useEffect(() => {
+    //handle submission here?
+  }, [currQuestionIndex, answers]);
+
+  //updates the selectedAnswer state when the user selects an answer.
+  const handleAnsSelect = (answer) => {
+    setAnswers((prevAnswers) => ({
+      ...prevAnswers,
+      [currQuestionIndex]: answer,
+    }));
+  };
+
+  const handleNextQ = () => {
+    if (currQuestionIndex < questionsData.length - 1) {
+      setCurrQuestionIndex((prevIndex) => prevIndex + 1);
+    }
+  };
   return (
-    <>
+    <main className="onboarding">
       <h1>X</h1>
       <div>
         <p>
@@ -67,8 +90,31 @@ function Onboarding() {
           <button type="submit">Submit</button>
         </form>
       </div>
-      <button>Next</button>
-    </>
+      <div>
+        {currQuestion && (
+          <div>
+            <p>{currQuestion.question}</p>
+            <ul>
+              {currQuestion.answers.map((answer, index) => (
+                <li key={index}>
+                  <label>
+                    <input
+                      type="radio"
+                      name="answer"
+                      value={answer}
+                      checked={answers[currQuestionIndex] === answer}
+                      onChange={() => handleAnsSelect(answer)}
+                    />
+                    {answer}
+                  </label>
+                </li>
+              ))}
+            </ul>
+            <button onClick={handleNextQ}>Next</button>
+          </div>
+        )}
+      </div>
+    </main>
   );
 }
 
