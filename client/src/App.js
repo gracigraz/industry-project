@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import ComparePage from "./pages/ComparePage/ComparePage";
 import CruiseList from "./pages/CruiseList/CruiseList";
 import CruiseDetails from "./pages/CruiseDetails/CruiseDetails";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -14,10 +15,14 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/onboarding" element={<Onboarding />} />
-        <Route path="/compare/:cruiseOne/:cruiseTwo" element={<ComparePage />} />
+        <Route
+          path="/compare/:cruiseOne/:cruiseTwo"
+          element={<ComparePage />}
+        />
         <Route path="/cruise-list" element={<CruiseList />} />
         <Route path="/cruise-details/:id" element={<CruiseDetails />} />
         <Route path="/details" />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

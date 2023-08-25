@@ -1,0 +1,28 @@
+.not-found {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__error {
+    color: #f4bc44;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 55px;
+    letter-spacing: 0.18px;
+    padding-bottom: 2rem;
+  }
+  &__message {
+    color: #0b224d;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 11px;
+    letter-spacing: 0.18px;
+  }
+}
