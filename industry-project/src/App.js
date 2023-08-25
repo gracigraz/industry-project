@@ -14,10 +14,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/onboarding" element={<Onboarding />} />
         <Route path="/compare" />
-        <Route path="/cruiselist" element={<CruiseList />}/>
+        <Route path="/cruise-list" element={<CruiseList />}/>
         <Route path="/cruise-details/:id" element={<CruiseDetails />}/>
         <Route path="/details" />
-        
       </Routes>
     </BrowserRouter>
   );
