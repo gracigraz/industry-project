@@ -3,11 +3,10 @@ import { useState, useEffect } from "react";
 import checkmark from "../../assets/icons/checkmark-outline.svg";
 import mark from "../../assets/icons/close-outline.svg";
 import chevronForward from "../../assets/icons/chevron-forward-outline.svg";
-import cruiseList from '../../data/cruise-list.json'
+import chevronBack from "../../assets/icons/chevron-back-outline.svg";
+import cruiseList from "../../data/cruise-list.json";
 
-
-
-function Carousel({cruiseOne, cruiseTwo}) {
+function Carousel({ cruiseOne, cruiseTwo }) {
   const [cardData, setCardData] = useState("");
 
   const handleSwipe = (e) => {};
@@ -72,7 +71,7 @@ function Carousel({cruiseOne, cruiseTwo}) {
 
             <div className="carousel-row2">
               <div className="carousel-content1">
-                <h2 className="carousel-content1__title">                  {cruiseList[cruiseTwo-1].boat_name}</h2>
+                <h2 className="carousel-content1__title">{cruiseList[cruiseTwo-1].boat_name}</h2>
               </div>
             </div>
             <div className="carousel-content-div-box">
@@ -115,6 +114,17 @@ function Carousel({cruiseOne, cruiseTwo}) {
               <p className="carousel-pragraph__text2">Many</p>
             </div>
           </div>
+
+          {/* <button
+            className="carousel-btn carousel-btn--left"
+            onClick={handleSwipe}
+          >
+            <img
+              className="carousel-btn__arrow"
+              src={chevronBack}
+              alt="check"
+            />
+          </button> */}
 
           <button
             className="carousel-btn carousel-btn--right"
