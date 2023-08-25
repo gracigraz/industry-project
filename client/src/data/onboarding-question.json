@@ -1,37 +1,39 @@
 [
   {
     "id": "001",
-    "question": "Are you traveling with a family?",
-    "answers": ["yes", "no"]
+    "question": "How would you describe your ideal vacation style?",
+    "answers": ["Adventurous", "Relaxing", "Both"]
   },
   {
     "id": "002",
-    "question": "Traveling with kids younger than 13 year old?",
-    "answers": ["yes", "no"]
+    "question": "Which type of scenic experience appeals to you the most?",
+    "answers": ["Ocean Views", "Coastal Towns", "Nature & Wildlife"]
   },
   {
     "id": "003",
-    "question": "What is your age?",
-    "answers": ["18-25", "26-35", "+35"]
+    "question": "Are you traveling solo, with a partner, friends, or family? Help us understand your companions.",
+    "answers": ["Couple", "Group", "Family", "Solo Traveler"]
   },
   {
     "id": "004",
-    "question": "Are you up for partying or relaxing?",
-    "answers": ["partying", "relaxing"]
+    "question": "How would you like to arrange your cabin to accommodate your family comfortably?",
+    "answers": [
+      "Connecting Cabins for Separate Space",
+      "Family Suite with Shared Space"
+    ]
   },
   {
     "id": "005",
-    "question": "How would you describe?",
-    "answers": ["relaxed traveler", "intense traveler"]
-  },
-  {
-    "id": "006",
-    "question": "Have you been in a boat before?",
-    "answers": ["yes", "no"]
-  },
-  {
-    "id": "007",
-    "question": "Do you feel seasick on boats?",
-    "answers": ["yes", "no"]
+    "question": "Which onboard amenities are essential for your comfort and enjoyment?",
+    "answers": [
+      "Kid's Clubs",
+      "Entertainment Shows",
+      "Childcare Services",
+      "Water Slides",
+      "Family Pools",
+      "Youth Programs",
+      "All You Can Eat",
+      "Adult Events"
+    ]
   }
 ]

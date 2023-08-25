@@ -66,7 +66,7 @@ function Onboarding() {
 
   return (
     <main className="onboarding">
-      <Link to="/">
+      <Link className="onboarding__link" to="/">
         <h1 className="onboarding__title">X</h1>
       </Link>
       <div className="onboarding__container-main">
@@ -92,7 +92,7 @@ function Onboarding() {
               ))}
           </div>
         </div>
-        <div>
+        <div className="onboarding__buttons">
           <button
             className="onboarding__button-continue"
             onClick={handleNext}
