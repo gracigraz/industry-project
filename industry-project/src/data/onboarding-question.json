@@ -1,22 +1,37 @@
 [
   {
     "id": "001",
-    "question": "What's your favorite color?",
-    "answers": ["red", "blue", "gren", "black"]
+    "question": "Are you traveling with a family?",
+    "answers": ["yes", "no"]
   },
   {
     "id": "002",
-    "question": "What's your favorite color?",
-    "answers": ["pink", "blue", "gren", "black"]
+    "question": "Traveling with kids younger than 13 year old?",
+    "answers": ["yes", "no"]
   },
   {
     "id": "003",
-    "question": "What's your favorite color?",
-    "answers": ["blue", "blue", "gren", "black"]
+    "question": "What is your age?",
+    "answers": ["18-25", "26-35", "+35"]
   },
   {
     "id": "004",
-    "question": "What's your favorite color?",
-    "answers": ["white", "blue", "gren", "black"]
+    "question": "Are you up for partying or relaxing?",
+    "answers": ["partying", "relaxing"]
+  },
+  {
+    "id": "005",
+    "question": "How would you describe?",
+    "answers": ["relaxed traveler", "intense traveler"]
+  },
+  {
+    "id": "006",
+    "question": "Have you been in a boat before?",
+    "answers": ["yes", "no"]
+  },
+  {
+    "id": "007",
+    "question": "Do you feel seasick on boats?",
+    "answers": ["yes", "no"]
   }
 ]
