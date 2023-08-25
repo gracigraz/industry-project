@@ -1,8 +1,11 @@
 import "./Carousel.scss";
 import { useState, useEffect } from "react";
-import arrowForward from "../../assets/icons/checkmark-outline.svg";
+import checkmark from "../../assets/icons/checkmark-outline.svg";
+import mark from "../../assets/icons/close-outline.svg";
+import chevronForward from "../../assets/icons/chevron-forward-outline.svg";
 
 function Carousel() {
+  const handleSwipe = () => {};
   return (
     <>
       <section>
@@ -33,8 +36,8 @@ function Carousel() {
 
               <img
                 className="carousel-paragraph__check"
-                src={arrowForward}
-                alt="arrow-forward"
+                src={checkmark}
+                alt="check"
               />
             </div>
 
@@ -43,8 +46,8 @@ function Carousel() {
 
               <img
                 className="carousel-paragraph__check"
-                src={arrowForward}
-                alt="arrow-forward"
+                src={checkmark}
+                alt="check"
               />
             </div>
             <div className="carousel-paragraph">
@@ -52,8 +55,8 @@ function Carousel() {
 
               <img
                 className="carousel-paragraph__check"
-                src={arrowForward}
-                alt="arrow-forward"
+                src={checkmark}
+                alt="check"
               />
             </div>
             <div className="carousel-paragraph">
@@ -70,7 +73,54 @@ function Carousel() {
             <div className="carousel-content-div-box">
               <hr className="carousel-content-div-box__divider"></hr>
             </div>
+
+            <div className="carousel-paragraph">
+              <h2 className="carousel-paragraph__text">
+                Childcare (6-36 mths)
+              </h2>
+
+              <img
+                className="carousel-paragraph__mark"
+                src={mark}
+                alt="X mark"
+              />
+            </div>
+
+            <div className="carousel-paragraph">
+              <h2 className="carousel-paragraph__text">Childcare (6-12 yrs)</h2>
+
+              <img
+                className="carousel-paragraph__check"
+                src={checkmark}
+                alt="check"
+              />
+            </div>
+            <div className="carousel-paragraph">
+              <h2 className="carousel-paragraph__text">Tweens and Teens</h2>
+
+              <img
+                className="carousel-paragraph__check"
+                src={checkmark}
+                alt="check"
+              />
+            </div>
+            <div className="carousel-paragraph">
+              <h2 className="carousel-paragraph__text">Activities</h2>
+
+              <p className="carousel-pragraph__text2">Many</p>
+            </div>
           </div>
+
+          <button
+            className="carousel-btn carousel-btn--right"
+            onClick={handleSwipe}
+          >
+            <img
+              className="carousel-btn__arrow"
+              src={chevronForward}
+              alt="check"
+            />
+          </button>
         </figure>
       </section>
     </>

@@ -140,6 +140,11 @@
         height: 24px;
       }
 
+      &__mark {
+        width: 24px;
+        height: 24px;
+      }
+
       &__text2 {
         line-height: 0.6875rem;
         font-family: "Montserrat";
@@ -181,94 +186,28 @@
     }
   }
 
-  // .carousel-table1 {
-  //   font-size: 18px;
-  //   border-collapse: collapse;
+  .carousel-btn {
+    background: none;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    cursor: pointer;
 
-  //   &__title {
-  //     padding: 16px 24px;
-  //     text-align: left;
-  //   }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  //   td {
-  //     padding: 16px 24px;
-  //     text-align: left;
-  //   }
+    &--right {
+      right: 0;
+      top: 60%;
+      transform: translate(-25%, 50%);
+    }
 
-  //   thead tr {
-  //     background-color: #fff;
-  //     color: #0b224d;
-  //     font-weight: 600;
-  //     stroke: 1px #0b224d;
-  //   }
-
-  //   thead th {
-  //     width: 25%;
-  //   }
-
-  //   tbody th,
-  //   td {
-  //     color: #0b224d;
-  //     font-size: 16px;
-  //   }
-
-  //   tbody tr:nth-child(odd) {
-  //     background-color: #f8f9fa;
-  //   }
-  //   tbody tr:nth-child(even) {
-  //     background-color: #e9ecef;
-  //   }
-  // }
-
-  // .carousel-table2 {
-  //   font-size: 18px;
-  //   border-collapse: collapse;
-
-  //   th,
-  //   td {
-  //     padding: 16px 24px;
-  //     text-align: left;
-  //   }
-
-  //   thead tr {
-  //     background-color: #fff;
-  //     color: #0b224d;
-  //     font-weight: 600;
-  //     stroke: 1px #0b224d;
-  //   }
-
-  //   thead th {
-  //     width: 25%;
-  //   }
-
-  //   tbody th,
-  //   td {
-  //     color: #0b224d;
-  //     font-size: 16px;
-  //   }
-
-  //   tbody tr:nth-child(odd) {
-  //     background-color: #f8f9fa;
-  //   }
-  //   tbody tr:nth-child(even) {
-  //     background-color: #e9ecef;
-  //   }
-  // }
-
-  // .btn {
-  //   background-color: #fff;
-  //   border: none;
-  //   height: 40px;
-  //   width: 40px;
-  //   border-radius: 50%;
-  //   position: absolute;
-  //   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  //   cursor: pointer;
-
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  // }
+    &__arrow {
+      width: 36px;
+      height: 36px;
+    }
+  }
 
   // .btn--left {
   //   /* In relation to PARENT ELEMENT */
