@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT;
 const onboardingRoutes = require("./routes/onboardingRoutes");
+const imagesRoutes = require("./routes/imagesRoutes");
 const cors = require("cors");
 
 // app.use(cors()) enable cors, this configures the CORS middleware to allow requests from any origin (*)
@@ -20,6 +21,9 @@ app.get("/", (req, res) => {
 });
 
 app.use("/onboarding", onboardingRoutes);
+
+app.use("/images/", imagesRoutes);
+
 
 app.listen(PORT, () => {
   console.log("Server running on PORT " + PORT);
