@@ -22,5 +22,5 @@ app.get("/", (req, res) => {
 app.use("/onboarding", onboardingRoutes);
 
 app.listen(PORT, () => {
-  console.log("Server in running on PORT " + PORT);
+  console.log("Server running on PORT " + PORT);
 });
