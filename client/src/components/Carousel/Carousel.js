@@ -5,7 +5,9 @@ import mark from "../../assets/icons/close-outline.svg";
 import chevronForward from "../../assets/icons/chevron-forward-outline.svg";
 
 function Carousel() {
-  const handleSwipe = () => {};
+  const [cardData, setCardData] = useState("");
+
+  const handleSwipe = (e) => {};
   return (
     <>
       <section>
