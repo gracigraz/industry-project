@@ -1,5 +1,12 @@
 [
   {
+    "title": "KIDS",
+    "item1": "Childcare (6-36 mths)",
+    "item2": "Childcare (6-12 yrs)",
+    "Item 3": "Tweens & Teens",
+    "item4": "Activities"
+  },
+  {
     "title": "AMENITIES",
     "item1": "Food (Included)",
     "item2": "Drinks (Included)",
@@ -10,7 +17,7 @@
     "title": "ACCESS",
     "item1": "CoCoCay resort",
     "item2": "6 hour port stop ",
-    "Item 3": "Excursions available",
+    "Item3": "Excursions available",
     "item4": "Activities"
   }
 ]
