@@ -1,15 +1,12 @@
 import "./Carousel.scss";
-import { useState, useEffect } from "react";
 import checkmark from "../../assets/icons/checkmark-outline.svg";
 import mark from "../../assets/icons/close-outline.svg";
 import chevronForward from "../../assets/icons/chevron-forward-outline.svg";
 import chevronBack from "../../assets/icons/chevron-back-outline.svg";
 import cruiseList from "../../data/cruise-list.json";
+// import cruiseData from "../../data/comparison.json";
 
 function Carousel({ cruiseOne, cruiseTwo }) {
-  const [cardData, setCardData] = useState("");
-
-  const handleSwipe = (e) => {};
   return (
     <>
       <section>
@@ -22,7 +19,7 @@ function Carousel({ cruiseOne, cruiseTwo }) {
             <div className="carousel-row1">
               <div className="carousel-content1">
                 <h2 className="carousel-content1__title">
-                  {cruiseList[cruiseOne-1].boat_name}
+                  {cruiseList[cruiseOne - 1].boat_name}
                 </h2>
               </div>
               <div className="carousel-content2">
@@ -71,7 +68,9 @@ function Carousel({ cruiseOne, cruiseTwo }) {
 
             <div className="carousel-row2">
               <div className="carousel-content1">
-                <h2 className="carousel-content1__title">{cruiseList[cruiseTwo-1].boat_name}</h2>
+                <h2 className="carousel-content1__title">
+                  {cruiseList[cruiseTwo - 1].boat_name}
+                </h2>
               </div>
             </div>
             <div className="carousel-content-div-box">
