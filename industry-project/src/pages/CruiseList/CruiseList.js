@@ -9,7 +9,7 @@ function CruiseList () {
             <img className='cruise-list__img' src={cocoCay}></img>
             <h1 className='cruise-list__h1'>Cruise List</h1>
             {cruiseList.map((selectedCruise) => {
-                return (<section className='cruise-list__section'>
+                return (<section key={selectedCruise.id} className='cruise-list__section'>
                 <div className='cruise-list__left-container'>
                     <img className='cruise-list__cruise-photo' src={cocoCay} alt='test' />
                 </div>
