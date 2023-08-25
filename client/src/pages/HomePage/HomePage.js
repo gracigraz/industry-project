@@ -2,7 +2,7 @@ import './HomePage.scss'
 import { Link } from 'react-router-dom';
 import cocoCay from '../../assets/images/coco-cay.jpg'
 
-function Header() {
+function HomePage() {
     return (
         <main className='home'>
             <h1 className='home__h1'>More than just a vacation</h1>
@@ -12,4 +12,4 @@ function Header() {
     )
 }
 
-export default Header;
+export default HomePage;
