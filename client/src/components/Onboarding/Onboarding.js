@@ -2,25 +2,28 @@ import "./Onboarding.scss";
 import React, { useState, useEffect } from "react";
 import questionsData from "../../data/onboarding-question.json";
 import { Link } from "react-router-dom";
-// import { saveAnsToJson } from "../../utils/utils.js";
 
 function Onboarding() {
   const [currQuestionIndex, setCurrQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState({});
   const currQuestion = questionsData[currQuestionIndex];
-  const allSelectedAnswers = answers;
+  const [allSelectedAnswers, setAllSelectedAnswers] = useState([]);
 
   useEffect(() => {
     // saveAnsToJson(allSelectedAnswers);
-  }, [currQuestionIndex, answers]);
+  }, [currQuestionIndex]);
 
   const handleAnsSelect = (answer) => {
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
       [currQuestionIndex]: answer,
     }));
-  };
 
+    setAllSelectedAnswers((prevAllSelectedAnswers) => [
+      ...prevAllSelectedAnswers,
+      answer,
+    ]);
+  };
   const handleNext = () => {
     if (currQuestionIndex < questionsData.length - 1) {
       setCurrQuestionIndex((prevIndex) => prevIndex + 1);

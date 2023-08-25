@@ -12,7 +12,7 @@ function readOnbaordingFile() {
 router.use(logMessage);
 
 router.get("/", (req, res) => {
-  const questions = readAthletesFile();
+  const questions = readOnboardingFile();
   res.json(questions);
   res.end();
 });
