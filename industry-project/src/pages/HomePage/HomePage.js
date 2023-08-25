@@ -4,7 +4,8 @@ import cocoCay from '../../assets/images/coco-cay.jpg'
 function Header() {
     return (
         <main className='home'>
-            <img className='home__hero' src={cocoCay} alt='Cruise anchored at CocoCay, a Royal Caribbean private island' />
+            <h1 className='home__h1'>Perfect Getway</h1>
+            <button className='home__button'>Find my Trip</button>
         </main>
     )
 }
