@@ -98,7 +98,7 @@ function CruiseList() {
               <div className="cruise-list__top-container">
                 <img
                   className="cruise-list__cruise-photo"
-                  src={`http://192.168.3.66:8080/images/bahamas-${cruiseIteration.id}`}
+                  src={`http://192.168.3.71:8080/images/bahamas-${cruiseIteration.id}`}
                   alt="test"
                 />
               </div>

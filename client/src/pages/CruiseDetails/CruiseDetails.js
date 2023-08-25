@@ -20,7 +20,7 @@ function CruiseDetails() {
 
   useEffect(() => {
     if (selectedCruise != null) {
-      const url = `http://192.168.3.66:8080/images/cruise-${selectedCruise.id}`;
+      const url = `http://192.168.3.71:8080/images/cruise-${selectedCruise.id}`;
       setCruiseImage(url);
     }
   }, [selectedCruise]);
