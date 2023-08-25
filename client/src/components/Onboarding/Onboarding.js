@@ -1,18 +1,25 @@
 import "./Onboarding.scss";
 import React, { useState, useEffect } from "react";
 import questionsData from "../../data/onboarding-question.json";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 function Onboarding() {
   const [currQuestionIndex, setCurrQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState({});
   const currQuestion = questionsData[currQuestionIndex];
   const [allSelectedAnswers, setAllSelectedAnswers] = useState([]);
+  // const history = useHistory();
 
   useEffect(() => {
-    // saveAnsToJson(allSelectedAnswers);
-  }, [currQuestionIndex]);
+    // console.log(allSelectedAnswers);
 
+    if (currQuestionIndex === questionsData.length) {
+      alert("Successfully completed questionnaire!");
+      // Navigate to the home page
+      // history.push("/");
+    }
+  }, [currQuestionIndex]);
+  // }, [allSelectedAnswers, currQuestionIndex, history]);
   const handleAnsSelect = (answer) => {
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
