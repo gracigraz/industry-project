@@ -2,6 +2,8 @@ import './CruiseDetails.scss'
 import cruiseList from '../../data/cruise-list.json'
 import { useParams } from "react-router-dom";
 import cruisePhoto from '../../assets/images/cruises.jpg'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 
 
@@ -9,13 +11,27 @@ import cruisePhoto from '../../assets/images/cruises.jpg'
 
 function CruiseDetails() {
     const { id } = useParams();
-    let selectedCruise;
 
-    for (let i = 0; i < cruiseList.length; i++) {
-        if (cruiseList[i].id === id) {
-            selectedCruise = cruiseList[i]
+    let [cruiseImage, setCruiseImage] = useState();
+
+    let [selectedCruise, setSelectedCruise] = useState();
+
+    useEffect(() => {
+        for (let i = 0; i < cruiseList.length; i++) {
+            if (cruiseList[i].id === id) {
+                setSelectedCruise(cruiseList[i])
+            }
         }
-    }
+    }, []);
+
+    useEffect(() => {
+        if (selectedCruise != null) {
+            const url = `http://192.168.3.71:8080/images/cruise-${selectedCruise.id}`
+            setCruiseImage(url)
+        }
+
+
+    }, [selectedCruise]);
 
     if (selectedCruise == null) {
         return (<>
@@ -25,7 +41,7 @@ function CruiseDetails() {
     else {
         return (
             <main className='cruise-details'>
-                <img className='cruise-details__hero' src={cruisePhoto} alt='Cruise ship you are seeing the details for' />
+                <img className='cruise-details__hero' src={cruiseImage} alt='Cruise ship you are seeing the details for' />
                 <h1 className='cruise-details__h1'>Cruise details</h1>
                 <h3 className='cruise-details__h3'><span className='cruise-details__bold'>Destination:</span> {selectedCruise.destination}</h3>
                 <h3 className='cruise-details__h3'><span className='cruise-details__bold'>Boat name: </span> {selectedCruise.boat_name}</h3>

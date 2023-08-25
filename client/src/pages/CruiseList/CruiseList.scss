@@ -35,7 +35,7 @@
     }
 
     &__cruise-photo {
-        background-image: url('../../assets/images/freedom-of-the-seas.jpeg');
+        background-image: url('../../assets/images/coco-cay.jpg');
         background-color: red;
         background-size:contain;
         background-repeat: no-repeat;
@@ -46,5 +46,18 @@
     &__link {
         text-decoration: none;
         color: black;
+    }
+
+    &__compare-container {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0 1rem;
+    }
+    &__compare-button{
+        background: rgba(244, 188, 68, 1);
+        color: rgba(56, 67, 120, 1);
+        border: none;
+        border-radius: .625rem;
+        padding: .75rem 2rem;
     }
 }
