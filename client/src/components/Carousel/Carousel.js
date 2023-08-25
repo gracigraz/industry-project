@@ -8,11 +8,9 @@ import cruiseList from '../../data/cruise-list.json'
 
 
 function Carousel({cruiseOne, cruiseTwo}) {
-  const handleSwipe = () => {};
+  const [cardData, setCardData] = useState("");
 
-  console.log(cruiseOne);
-  console.log(cruiseList[cruiseOne]);
-
+  const handleSwipe = (e) => {};
   return (
     <>
       <section>

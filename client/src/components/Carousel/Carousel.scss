@@ -171,17 +171,17 @@
           color: #0b224d;
         }
       }
+    }
+    .carousel-content-div-box {
+      display: flex;
+      flex-direction: column;
+      width: 280px;
+      margin-bottom: 12px;
+      margin-top: 2px;
 
-      .carousel-content-div-box {
-        display: flex;
-        flex-direction: column;
-        width: 280px;
-        margin-bottom: 12px;
-
-        &__divider {
-          stroke-width: 1px;
-          fill: #0b224d;
-        }
+      &__divider {
+        stroke-width: 1px;
+        fill: #0b224d;
       }
     }
   }
