@@ -1,49 +1,69 @@
 import "./Onboarding.scss";
 import React, { useState, useEffect } from "react";
 import questionsData from "../../data/onboarding-question.json";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Onboarding() {
   const [currQuestionIndex, setCurrQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState({});
   const currQuestion = questionsData[currQuestionIndex];
-  const [allSelectedAnswers, setAllSelectedAnswers] = useState([]);
-  // const history = useHistory();
+  const [lastSelectedAnswer, setLastSelectedAnswer] = useState(null);
+  const [skippedAnswers, setSkippedAnswers] = useState([]);
+  const [completed, setCompleted] = useState(false);
 
-  useEffect(() => {
-    // console.log(allSelectedAnswers);
-
-    if (currQuestionIndex === questionsData.length) {
-      alert("Successfully completed questionnaire!");
-      // Navigate to the home page
-      // history.push("/");
-    }
-  }, [currQuestionIndex]);
-  // }, [allSelectedAnswers, currQuestionIndex, history]);
   const handleAnsSelect = (answer) => {
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
       [currQuestionIndex]: answer,
     }));
-
-    setAllSelectedAnswers((prevAllSelectedAnswers) => [
-      ...prevAllSelectedAnswers,
-      answer,
-    ]);
+    setLastSelectedAnswer(answer);
   };
+
   const handleNext = () => {
-    if (currQuestionIndex < questionsData.length - 1) {
+    if (
+      currQuestionIndex < questionsData.length &&
+      (answers[currQuestionIndex] || answers[currQuestionIndex] === "Skipped")
+    ) {
+      if (answers[currQuestionIndex] === "Skipped") {
+        setSkippedAnswers((prevSkippedAnswers) => [
+          ...prevSkippedAnswers,
+          "Skipped",
+        ]);
+      } else {
+        setSkippedAnswers((prevSkippedAnswers) => [
+          ...prevSkippedAnswers,
+          lastSelectedAnswer,
+        ]);
+      }
       setCurrQuestionIndex((prevIndex) => prevIndex + 1);
     }
   };
+
   const handleSkip = () => {
-    setCurrQuestionIndex((prevIndex) => prevIndex + 1);
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
       [currQuestionIndex]: "Skipped",
     }));
+    setSkippedAnswers((prevSkippedAnswers) => [
+      ...prevSkippedAnswers,
+      "Skipped",
+    ]);
+    setCurrQuestionIndex((prevIndex) => prevIndex + 1);
   };
-  console.log(allSelectedAnswers);
+
+  useEffect(() => {
+    if (currQuestionIndex === questionsData.length) {
+      setCompleted(true);
+      window.location.href = "/cruise-list";
+    }
+    console.log(questionsData.length, setCompleted);
+  }, [currQuestionIndex]);
+
+  const isContinueDisabled =
+    !currQuestion ||
+    (!currQuestion.answers.includes(answers[currQuestionIndex]) &&
+      answers[currQuestionIndex] !== "Skipped");
+
   return (
     <main className="onboarding">
       <Link to="/">
@@ -72,12 +92,18 @@ function Onboarding() {
               ))}
           </div>
         </div>
-        <button className="onboarding__button-continue" onClick={handleNext}>
-          CONTINUE
-        </button>
-        <button className="onboarding__button-skip" onClick={handleSkip}>
-          SKIP
-        </button>
+        <div>
+          <button
+            className="onboarding__button-continue"
+            onClick={handleNext}
+            disabled={isContinueDisabled}
+          >
+            CONTINUE
+          </button>
+          <button className="onboarding__button-skip" onClick={handleSkip}>
+            SKIP
+          </button>
+        </div>
       </div>
     </main>
   );
