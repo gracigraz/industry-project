@@ -16,7 +16,6 @@ function App() {
         <Route path="/compare" />
         <Route path="/cruiselist" element={<CruiseList />}/>
         <Route path="/cruise-details/:id" element={<CruiseDetails />}/>
-
         <Route path="/details" />
         
       </Routes>

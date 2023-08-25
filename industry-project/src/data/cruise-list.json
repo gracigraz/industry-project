@@ -1,0 +1,59 @@
+[
+    {
+        "id" : "1",
+        "destination": "Bahamas & Perfect Day Cruise",
+        "boat_name" : "Freedom of the Seas",
+        "days_at_sea" : "3 nights",
+        "capacity" : "4,500",
+        "family_friendly" : "Yes",
+        "review_count" : 2387,
+        "review_avg": 4.0,
+        "cruise_photo" : "freedom-of-the-seas.jpeg",
+        "last_cruise_reparation" : "March 2020",
+        "next_departure" : "12/18/2023",
+        "port" : "Miami"
+    },
+    {
+        "id" : "2",
+        "destination": "Key West & Bahamas Cruise",
+        "boat_name" : "Grandeur of the Seas",
+        "days_at_sea" : "5 nights",
+        "capacity" : "1,992",
+        "family_friendly" : "No",
+        "review_count" : 1765,
+        "review_avg": 4.0,
+        "cruise_photo" : "grandeur-of-the-seas.jpeg",
+        "last_cruise_reparation" : "2012",
+        "next_departure" : "10/23/2023",
+        "port" : "Tampa"
+    },
+    {
+        "id" : "3",
+        "destination": "Bahamas & Perfect Day Cruise",
+        "boat_name" : "Oasis of the Seas",
+        "days_at_sea" : "4 nights",
+        "capacity" : "5,606",
+        "family_friendly" : "Yes",
+        "review_count" : 3740,
+        "review_avg": 4.0,
+        "cruise_photo" : "oasis-of-the-seas.jpeg",
+        "last_cruise_reparation" : "2019" ,
+        "next_departure" : "12/17/2023",
+        "port" : "Miami"
+
+    },
+    {
+        "id" : "4",
+        "destination": "Bahamas & Perfect Day",
+        "boat_name" : "Allure of the Seas",
+        "days_at_sea" : "4 nights",
+        "capacity" : "5,492",
+        "family_friendly" : "Yes",
+        "review_count" : 3102,
+        "review_avg": 4.0,
+        "cruise_photo" : "allure-of-the-seas.jpeg",
+        "last_cruise_reparation" : "2015" ,
+        "next_departure" : "10/25/2023",
+        "port" : "Miami"
+    }
+]
