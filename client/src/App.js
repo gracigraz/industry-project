@@ -4,6 +4,8 @@ import Onboarding from "./components/Onboarding/Onboarding";
 import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
 import ComparePage from "./pages/ComparePage/ComparePage";
+import ComparePage2 from "./pages/ComparePage2/ComparePage2";
+import ComparePage3 from "./pages/ComparePage3/ComparePage3";
 import CruiseList from "./pages/CruiseList/CruiseList";
 import CruiseDetails from "./pages/CruiseDetails/CruiseDetails";
 import NotFound from "./pages/NotFound/NotFound";

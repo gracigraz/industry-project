@@ -4,9 +4,10 @@ import mark from "../../assets/icons/close-outline.svg";
 import chevronForward from "../../assets/icons/chevron-forward-outline.svg";
 import chevronBack from "../../assets/icons/chevron-back-outline.svg";
 import cruiseList from "../../data/cruise-list.json";
+// import { Link } from "react-router-dom";
 // import cruiseData from "../../data/comparison.json";
 
-function Carousel({ cruiseOne, cruiseTwo }) {
+function Carousel2({ cruiseOne, cruiseTwo }) {
   return (
     <>
       <section>
@@ -114,21 +115,14 @@ function Carousel({ cruiseOne, cruiseTwo }) {
             </div>
           </div>
 
-          <button
-            className="carousel-btn carousel-btn--left"
-            onClick={handleSwipe}
-          >
+          <button className="carousel-btn carousel-btn--left">
             <img
               className="carousel-btn__arrow"
               src={chevronBack}
               alt="check"
             />
           </button>
-
-          <button
-            className="carousel-btn carousel-btn--right"
-            onClick={handleSwipe}
-          >
+          <button className="carousel-btn carousel-btn--right">
             <img
               className="carousel-btn__arrow"
               src={chevronForward}
@@ -141,4 +135,4 @@ function Carousel({ cruiseOne, cruiseTwo }) {
   );
 }
 
-export default Carousel;
+export default Carousel2;
