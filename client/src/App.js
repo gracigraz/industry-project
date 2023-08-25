@@ -2,7 +2,8 @@ import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Onboarding from "./components/Onboarding/Onboarding";
 import Header from "./components/Header/Header";
-import HomePage from './pages/HomePage/HomePage';
+import HomePage from "./pages/HomePage/HomePage";
+import ComparePage from "./pages/ComparePage/ComparePage";
 import CruiseList from "./pages/CruiseList/CruiseList";
 import CruiseDetails from "./pages/CruiseDetails/CruiseDetails";
 
@@ -13,9 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/onboarding" element={<Onboarding />} />
-        <Route path="/compare" />
-        <Route path="/cruise-list" element={<CruiseList />}/>
-        <Route path="/cruise-details/:id" element={<CruiseDetails />}/>
+        <Route path="/compare" element={<ComparePage />} />
+        <Route path="/cruise-list" element={<CruiseList />} />
+        <Route path="/cruise-details/:id" element={<CruiseDetails />} />
         <Route path="/details" />
       </Routes>
     </BrowserRouter>

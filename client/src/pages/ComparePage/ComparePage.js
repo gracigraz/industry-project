@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
 import Carousel from "../../components/Carousel/Carousel";
+import "./ComparePage.scss";
 
 function ComparePage() {
   return (
     <>
-      <Carousel />
+      <section className="compare-container">
+        <Carousel />
+      </section>
     </>
   );
 }
