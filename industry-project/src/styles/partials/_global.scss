@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  line-height: 1;
+}
+
+a {
+  display: inline-block;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+button {
+  border: 0 none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
