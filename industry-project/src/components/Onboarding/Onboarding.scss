@@ -1,12 +1,58 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: white;
+  background-color: $white;
 }
 
 .onboarding {
-  display: flex;
-  flex-direction: row;
+  padding: 1rem;
+  &__title {
+    text-align: left;
+    color: black;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  &__container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__container-secondary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__button-option {
+    width: 109px;
+    height: 41px;
+    border-radius: 100px;
+    border: solid 2px $dark-gray;
+    &--selected {
+      border-color: #2551aa;
+      background-color: #384378;
+      color: $white;
+    }
+  }
+
+  &__button-continue {
+    margin-top: 10rem;
+    background-color: $yellow;
+    color: $dark-gray;
+    width: 132px;
+    height: 41px;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  &__chat {
+    width: 57px;
+    height: 63px;
+  }
 }

@@ -1,17 +1,19 @@
 import "./Onboarding.scss";
 import React, { useState, useEffect } from "react";
 import questionsData from "../../data/onboarding-question.json";
+import { Link } from "react-router-dom";
+// import { saveAnsToJson } from "../../utils/utils.js";
 
 function Onboarding() {
   const [currQuestionIndex, setCurrQuestionIndex] = useState(0);
-  const [answers, setAnswers] = useState(""); //stores the user's selected answer for the current question.
+  const [answers, setAnswers] = useState({});
   const currQuestion = questionsData[currQuestionIndex];
+  const allSelectedAnswers = answers;
 
   useEffect(() => {
-    //handle submission here?
+    // saveAnsToJson(allSelectedAnswers);
   }, [currQuestionIndex, answers]);
 
-  //updates the selectedAnswer state when the user selects an answer.
   const handleAnsSelect = (answer) => {
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
@@ -19,100 +21,53 @@ function Onboarding() {
     }));
   };
 
-  const handleNextQ = () => {
+  const handleNext = () => {
     if (currQuestionIndex < questionsData.length - 1) {
       setCurrQuestionIndex((prevIndex) => prevIndex + 1);
     }
   };
+  const handleSkip = () => {
+    setCurrQuestionIndex((prevIndex) => prevIndex + 1);
+    setAnswers((prevAnswers) => ({
+      ...prevAnswers,
+      [currQuestionIndex]: "Skipped",
+    }));
+  };
+  console.log(allSelectedAnswers);
   return (
     <main className="onboarding">
-      <h1>X</h1>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor ?
-        </p>
-        <input type="submit" value="option 1" />
-        <input type="text" value="option 1" />
-
-        <button>option 1</button>
-        {/* form option with radio buttons*/}
-        <form>
-          <label>
-            <input type="radio" name="answer" value="option1" />
-            Option 1
-          </label>
-          <label>
-            <input type="radio" name="answer" value="option2" />
-            Option 2
-          </label>
-          <label>
-            <input type="radio" name="answer" value="option3" />
-            Option 3
-          </label>
-          <button type="submit">Next</button>
-        </form>
-
-        {/* button option */}
-        <button type="button" class="option-button" data-value="option1">
-          Option 1
-        </button>
-        <button type="button" class="option-button" data-value="option2">
-          Option 2
-        </button>
-        <button type="button" class="option-button" data-value="option3">
-          Option 3
-        </button>
-
-        {/* dropdown menu option */}
-        <label for="question">Select the correct answer:</label>
-        <select id="question" name="question">
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-        </select>
-
-        {/* option checkboxes */}
-        <form>
-          <label>
-            <input type="checkbox" name="answer[]" value="option1" />
-            Option 1
-          </label>
-          <label>
-            <input type="checkbox" name="answer[]" value="option2" />
-            Option 2
-          </label>
-          <label>
-            <input type="checkbox" name="answer[]" value="option3" />
-            Option 3
-          </label>
-
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-      <div>
-        {currQuestion && (
+      <Link to="/">
+        <h1 className="onboarding__title">X</h1>
+      </Link>
+      <div className="onboarding__container-main">
+        <div className="onboarding__container-secondary">
+          {currQuestion && (
+            <p className="onboarding__question">{currQuestion.question}</p>
+          )}
           <div>
-            <p>{currQuestion.question}</p>
-            <ul>
-              {currQuestion.answers.map((answer, index) => (
-                <li key={index}>
-                  <label>
-                    <input
-                      type="radio"
-                      name="answer"
-                      value={answer}
-                      checked={answers[currQuestionIndex] === answer}
-                      onChange={() => handleAnsSelect(answer)}
-                    />
-                    {answer}
-                  </label>
-                </li>
+            {currQuestion &&
+              currQuestion.answers.map((answer, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  className={`onboarding__button-option ${
+                    answers[currQuestionIndex] === answer
+                      ? "onboarding__button-option--selected"
+                      : ""
+                  }`}
+                  onClick={() => handleAnsSelect(answer)}
+                >
+                  {answer}
+                </button>
               ))}
-            </ul>
-            <button onClick={handleNextQ}>Next</button>
           </div>
-        )}
+        </div>
+        <button className="onboarding__button-continue" onClick={handleNext}>
+          CONTINUE
+        </button>
+        <button className="onboarding__button-skip" onClick={handleSkip}>
+          SKIP
+        </button>
       </div>
     </main>
   );
