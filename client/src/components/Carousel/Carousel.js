@@ -115,7 +115,7 @@ function Carousel({ cruiseOne, cruiseTwo }) {
             </div>
           </div>
 
-          {/* <button
+          <button
             className="carousel-btn carousel-btn--left"
             onClick={handleSwipe}
           >
@@ -124,7 +124,7 @@ function Carousel({ cruiseOne, cruiseTwo }) {
               src={chevronBack}
               alt="check"
             />
-          </button> */}
+          </button>
 
           <button
             className="carousel-btn carousel-btn--right"
