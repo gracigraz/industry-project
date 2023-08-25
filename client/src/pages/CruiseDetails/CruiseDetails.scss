@@ -10,5 +10,11 @@
     }
     &__h1, &__h3 {
         padding: 0.25rem 1rem;
+        font-size: small;
+        font-weight: normal;
+    }
+
+    &__bold {
+        font-weight: bold;
     }
 }

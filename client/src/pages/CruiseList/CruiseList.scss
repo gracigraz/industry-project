@@ -10,15 +10,21 @@
 
     &__h3 {
         font-size: small;
+        font-weight: normal;
+    }
+
+    &__bold {
+        font-weight: bold;
     }
 
     &__section {
         border-radius: .625rem;
-        border: 1px gray solid;
+        border: 1px black solid;
         display: flex;
         flex-direction: column;
         margin: 1rem;
         overflow: hidden;
+        box-shadow: 5px 5px gray;
     }
     
     &__left-container{
@@ -35,5 +41,10 @@
         background-repeat: no-repeat;
         width: 100%;
         margin: auto;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: black;
     }
 }
