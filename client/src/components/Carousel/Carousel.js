@@ -3,9 +3,16 @@ import { useState, useEffect } from "react";
 import checkmark from "../../assets/icons/checkmark-outline.svg";
 import mark from "../../assets/icons/close-outline.svg";
 import chevronForward from "../../assets/icons/chevron-forward-outline.svg";
+import cruiseList from '../../data/cruise-list.json'
 
-function Carousel() {
+
+
+function Carousel({cruiseOne, cruiseTwo}) {
   const handleSwipe = () => {};
+
+  console.log(cruiseOne);
+  console.log(cruiseList[cruiseOne]);
+
   return (
     <>
       <section>
@@ -18,7 +25,7 @@ function Carousel() {
             <div className="carousel-row1">
               <div className="carousel-content1">
                 <h2 className="carousel-content1__title">
-                  Independence of the Seas
+                  {cruiseList[cruiseOne].boat_name}
                 </h2>
               </div>
               <div className="carousel-content2">
@@ -67,7 +74,7 @@ function Carousel() {
 
             <div className="carousel-row2">
               <div className="carousel-content1">
-                <h2 className="carousel-content1__title">Jewel of the Seas</h2>
+                <h2 className="carousel-content1__title">                  {cruiseList[cruiseTwo].boat_name}</h2>
               </div>
             </div>
             <div className="carousel-content-div-box">

@@ -19,11 +19,12 @@ function CruiseList() {
         }
 
         if (selectedButton[0].innerHTML === 'SELECT CRUISES TO COMPARE' && selectedCruises.length === 2) {
-            // window.location.
+            window.location.replace('/compare/'+ selectedCruises[0] + '/' + selectedCruises[1])
         }
     }
 
     function handleSelectCruise(cruiseClick) {
+        cruiseClick = cruiseClick-1
         let selectedButton = document.querySelectorAll('.cruise-list__compare-button')
         let selectedComparison = document.querySelectorAll('.cruise-list__comparison-container')
 
@@ -48,7 +49,6 @@ function CruiseList() {
                 let tempArray = selectedCruises
                 tempArray.push(cruiseClick)
                 setSelectedCruises(tempArray)
-                console.log(cruiseList[cruiseClick].boat_name);
                 let comparisonH3 = selectedComparison[0].appendChild(document.createElement("h3"));
                 comparisonH3.textContent = cruiseList[cruiseClick].boat_name;
             }
@@ -70,18 +70,18 @@ function CruiseList() {
                         <section onClick={() => { handleSelectCruise(cruiseIteration.id) }} className='cruise-list__section'>
                             <div className='cruise-list__top-container'>
                                 <img className='cruise-list__cruise-photo' src={`http://192.168.3.71:8080/images/bahamas-${cruiseIteration.id}`} alt='test' />
-                            </div >
+                            </div>
                             <div className='cruise-list__bottom-container'>
                                 <h3 className='cruise-list__h3'><span className='cruise-list__bold'>Boat name:</span> {cruiseIteration.boat_name}</h3>
                                 <h3 className='cruise-list__h3'><span className='cruise-list__bold'>Kids & family friendly:</span> {cruiseIteration.family_friendly}</h3>
                                 <h3 className='cruise-list__h3'><span className='cruise-list__bold'>Next departure:</span> {cruiseIteration.next_departure}</h3>
                                 <h3 className='cruise-list__h3'><span className='cruise-list__bold'>Port:</span> {cruiseIteration.port}</h3>
                             </div>
-                        </section >
-                    </div >
+                        </section>
+                    </div>
                 )
             })}
-        </div >
+        </div>
     )
 }
 

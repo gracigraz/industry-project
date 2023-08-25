@@ -1,9 +1,7 @@
 import './CruiseDetails.scss'
 import cruiseList from '../../data/cruise-list.json'
 import { useParams } from "react-router-dom";
-import cruisePhoto from '../../assets/images/cruises.jpg'
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
 
 
