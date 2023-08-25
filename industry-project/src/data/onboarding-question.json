@@ -1,0 +1,22 @@
+[
+  {
+    "id": "001",
+    "question": "What's your favorite color?",
+    "answers": ["red", "blue", "gren", "black"]
+  },
+  {
+    "id": "002",
+    "question": "What's your favorite color?",
+    "answers": ["pink", "blue", "gren", "black"]
+  },
+  {
+    "id": "003",
+    "question": "What's your favorite color?",
+    "answers": ["blue", "blue", "gren", "black"]
+  },
+  {
+    "id": "004",
+    "question": "What's your favorite color?",
+    "answers": ["white", "blue", "gren", "black"]
+  }
+]

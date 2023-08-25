@@ -48,6 +48,24 @@ function Onboarding() {
           <option value="option2">Option 2</option>
           <option value="option3">Option 3</option>
         </select>
+
+        {/* option checkboxes */}
+        <form>
+          <label>
+            <input type="checkbox" name="answer[]" value="option1" />
+            Option 1
+          </label>
+          <label>
+            <input type="checkbox" name="answer[]" value="option2" />
+            Option 2
+          </label>
+          <label>
+            <input type="checkbox" name="answer[]" value="option3" />
+            Option 3
+          </label>
+
+          <button type="submit">Submit</button>
+        </form>
       </div>
       <button>Next</button>
     </>
