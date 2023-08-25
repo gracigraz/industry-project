@@ -9,34 +9,31 @@
     }
 
     &__h3 {
-        font-size: medium;
+        font-size: small;
     }
 
     &__section {
-        border: 1px gray solid;
         border-radius: .625rem;
-        padding: .25rem;
+        border: 1px gray solid;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         margin: 1rem;
+        overflow: hidden;
     }
     
     &__left-container{
-        width: 30%;
         align-self: center;
     }
-    &__right-container{
-        width: 70%;
+    &__bottom-container{
+        padding: 0 1rem;
     }
 
     &__cruise-photo {
         background-image: url('../../assets/images/freedom-of-the-seas.jpeg');
         background-color: red;
-        background-size:cover;
+        background-size:contain;
         background-repeat: no-repeat;
-        width: 6.25rem;
-        height: 6.25rem;
-        border-radius: 3.125rem;
+        width: 100%;
         margin: auto;
     }
 }
