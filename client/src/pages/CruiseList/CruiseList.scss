@@ -1,7 +1,7 @@
 .cruise-list {
 
     &__img {
-        width: 100%;
+        height: 100%;
     }
 
     &__h1 {
@@ -27,20 +27,18 @@
         box-shadow: 5px 5px gray;
     }
     
-    &__left-container{
+    &__top-container{
         align-self: center;
+        height: 200px;
+        width: 350px;
+        overflow: hidden;
     }
     &__bottom-container{
         padding: 0 1rem;
     }
 
     &__cruise-photo {
-        background-image: url('../../assets/images/coco-cay.jpg');
-        background-color: red;
-        background-size:contain;
-        background-repeat: no-repeat;
         width: 100%;
-        margin: auto;
     }
 
     &__link {
